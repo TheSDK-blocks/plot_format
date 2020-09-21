@@ -1,7 +1,7 @@
 add wave -position insertpoint  \
-sim/:tb_inverter:A \
-sim/:tb_inverter:initdone \
-sim/:tb_inverter:clock \
-sim/:tb_inverter:Z \
+sim/:tb_plot_format:A \
+sim/:tb_plot_format:initdone \
+sim/:tb_plot_format:clock \
+sim/:tb_plot_format:Z \
 
 run -all
