@@ -56,5 +56,6 @@ plt.rcParams['figure.titlesize'] = 10
 #plt.rcParams['figure.figsize'] = (4.774,2.95)
 # This should be the width of one column
 plt.rcParams['figure.figsize'] = (3.5,2.3)
+plt.rcParams['figure.dpi'] = 150
 plt.rcParams['figure.constrained_layout.use'] = True
 plt.rcParams['image.cmap'] = 'gray'
