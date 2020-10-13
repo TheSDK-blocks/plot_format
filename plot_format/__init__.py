@@ -49,10 +49,13 @@ def set_style(style='ieeetran'):
         # This cycles first through linestyles with black ('0') color, then 40% gray, etc. 
         monochrome = (cycler('color', ['0.0','0.4','0.6'])*cycler('linestyle', ['-', '--', ':', '-.']))
         plt.rcParams['font.weight'] = 'normal'
+        #plt.rcParams['font.family'] = 'serif'
         plt.rcParams['font.family'] = 'serif'
+        plt.rcParams['font.serif'] = ['Times New Roman'] + plt.rcParams['font.serif']
         plt.rcParams['mathtext.fontset'] = 'dejavuserif'
         # This should give fitting font style, might not work if ghostscript is not in path
         plt.rcParams['text.usetex'] = True
+        plt.rcParams['text.latex.preamble'] = [r'\usepackage{mathptmx}']
         # 10 or 8?
         plt.rcParams['axes.labelsize'] = 10
         plt.rcParams['axes.labelweight'] = 'normal'
@@ -68,7 +71,8 @@ def set_style(style='ieeetran'):
         plt.rcParams['legend.fancybox'] = False
         plt.rcParams['legend.frameon'] = True
         plt.rcParams['legend.framealpha'] = 1
-        plt.rcParams['legend.edgecolor'] = '0.6'
+        plt.rcParams['legend.edgecolor'] = '0'
+        plt.rcParams['patch.linewidth'] = '0.5'
         plt.rcParams['xtick.labelsize'] = 8
         plt.rcParams['ytick.labelsize'] = 8
         plt.rcParams['figure.titlesize'] = 10
@@ -107,7 +111,7 @@ def set_style(style='ieeetran'):
         plt.rcParams['figure.constrained_layout.use'] = True
         plt.rcParams['image.cmap'] = 'gray'
     elif style == 'isscc_bw':
-        monochrome = (cycler('linestyle', ['-', '--', ':', '-.'])*cycler('color', ['0.0','0.4','0.6']))
+        monochrome = (cycler('color', ['0.0','0.4','0.6'])*cycler('linestyle', ['-', '--', ':', '-.']))
         plt.rcParams['font.weight'] = 'normal'
         plt.rcParams['font.family'] = 'sans'
         plt.rcParams['text.usetex'] = False
