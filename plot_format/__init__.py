@@ -49,7 +49,6 @@ def set_style(style='ieeetran'):
         # This cycles first through linestyles with black ('0') color, then 40% gray, etc. 
         monochrome = (cycler('color', ['0.0','0.4','0.6'])*cycler('linestyle', ['-', '--', ':', '-.']))
         plt.rcParams['font.weight'] = 'normal'
-        #plt.rcParams['font.family'] = 'serif'
         plt.rcParams['font.family'] = 'serif'
         plt.rcParams['font.serif'] = ['Times New Roman'] + plt.rcParams['font.serif']
         plt.rcParams['mathtext.fontset'] = 'dejavuserif'
@@ -76,8 +75,6 @@ def set_style(style='ieeetran'):
         plt.rcParams['xtick.labelsize'] = 8
         plt.rcParams['ytick.labelsize'] = 8
         plt.rcParams['figure.titlesize'] = 10
-        # This was somewhere online
-        #plt.rcParams['figure.figsize'] = (4.774,2.95)
         # This should be the width of one column
         plt.rcParams['figure.figsize'] = (3.5,2.0)
         plt.rcParams['figure.dpi'] = 150
