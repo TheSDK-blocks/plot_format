@@ -65,7 +65,7 @@ def set_style(style='ieeetran'):
         plt.rcParams['axes.xmargin'] = 0
         plt.rcParams['grid.color'] = '0.75'
         plt.rcParams['lines.linewidth'] = 1
-        plt.rcParams['lines.markersize'] = 6
+        plt.rcParams['lines.markersize'] = 5
         plt.rcParams['legend.fontsize'] = 9
         plt.rcParams['legend.fancybox'] = False
         plt.rcParams['legend.frameon'] = True
@@ -81,7 +81,7 @@ def set_style(style='ieeetran'):
         plt.rcParams['figure.constrained_layout.use'] = True
         plt.rcParams['image.cmap'] = 'gray'
     elif style == 'isscc':
-        monochrome = (cycler('linestyle', ['-', '--', ':', '-.'])*cycler('color', ['b','r','k','g']))
+        monochrome = (cycler('linestyle', ['-', '--', ':', '-.'])*cycler('color', ['b','r','g','m','k']))
         plt.rcParams['font.weight'] = 'normal'
         plt.rcParams['font.family'] = 'sans'
         plt.rcParams['text.usetex'] = False
