@@ -7,6 +7,11 @@ Global plot formatting options.  Goal is to produce IEEE journal compatible
 figures easily.  Each plot format setting set in this file can be overriden in
 individual plots, or by setting the respective rcParams again.
 
+Reference:
+https://matplotlib.org/3.1.1/tutorials/introductory/customizing.html
+
+Initially written by Okko Järvinen, okko.jarvinen@aalto.fi, 2020.
+
 How to use
 ----------
 
@@ -24,11 +29,6 @@ parameter::
 Default style is 'ieeetran'. Feel free to add your own styles. The purpose is
 to make common styles that can be used in many contexts -- very specific
 styling should be done in the plot itself.
-
-Reference:
-https://matplotlib.org/3.1.1/tutorials/introductory/customizing.html
-
-Initially written by Okko Järvinen, okko.jarvinen@aalto.fi, 2020.
 
 """
 
