@@ -45,9 +45,15 @@ import matplotlib.pyplot as plt
 from cycler import cycler
 
 def set_style(style='ieeetran'):
+    # Common settings
+    plt.rcParams['savefig.bbox'] = 'tight'
+    plt.rcParams['savefig.pad_inches'] = 0
+    plt.rcParams['savefig.format'] = 'pdf'
+    plt.rcParams['figure.dpi'] = 150
+    plt.rcParams['figure.constrained_layout.use'] = True
     if style == 'ieeetran':
         # This cycles first through linestyles with black ('0') color, then 40% gray, etc. 
-        monochrome = (cycler('color', ['0.0','0.4','0.6'])*cycler('linestyle', ['-', '--', ':', '-.']))
+        monochrome = (cycler('color', ['0.0','0.5','0.7'])*cycler('linestyle', ['-', '--', ':', '-.']))
         plt.rcParams['font.weight'] = 'normal'
         plt.rcParams['font.family'] = 'serif'
         plt.rcParams['font.serif'] = ['Times New Roman'] + plt.rcParams['font.serif']
@@ -78,8 +84,6 @@ def set_style(style='ieeetran'):
         plt.rcParams['figure.titlesize'] = 10
         # This should be the width of one column
         plt.rcParams['figure.figsize'] = (3.5,2.0)
-        plt.rcParams['figure.dpi'] = 150
-        plt.rcParams['figure.constrained_layout.use'] = True
         plt.rcParams['image.cmap'] = 'gray'
     elif style == 'isscc':
         monochrome = (cycler('linestyle', ['-', '--', ':', '-.'])*cycler('color', ['b','r','g','m','k']))
@@ -106,8 +110,6 @@ def set_style(style='ieeetran'):
         plt.rcParams['ytick.labelsize'] = 9
         plt.rcParams['figure.titlesize'] = 10
         plt.rcParams['figure.figsize'] = (3.2,2.3)
-        plt.rcParams['figure.dpi'] = 150
-        plt.rcParams['figure.constrained_layout.use'] = True
         plt.rcParams['image.cmap'] = 'jet'
     elif style == 'isscc_bw':
         monochrome = (cycler('color', ['0.0','0.4','0.6'])*cycler('linestyle', ['-', '--', ':', '-.']))
@@ -134,8 +136,6 @@ def set_style(style='ieeetran'):
         plt.rcParams['ytick.labelsize'] = 9
         plt.rcParams['figure.titlesize'] = 10
         plt.rcParams['figure.figsize'] = (3.2,2.3)
-        plt.rcParams['figure.dpi'] = 150
-        plt.rcParams['figure.constrained_layout.use'] = True
         plt.rcParams['image.cmap'] = 'gray'
     else:
         pass
