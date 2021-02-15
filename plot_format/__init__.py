@@ -60,7 +60,7 @@ def set_style(style='ieeetran'):
         plt.rcParams['mathtext.fontset'] = 'dejavuserif'
         # This should give fitting font style, might not work if ghostscript is not in path
         plt.rcParams['text.usetex'] = True
-        plt.rcParams['text.latex.preamble'] = [r'\usepackage{mathptmx}',r'\usepackage{amsmath}']
+        plt.rcParams['text.latex.preamble'] = r'\usepackage{mathptmx} \usepackage{amsmath}'
         # 10 or 8?
         plt.rcParams['axes.labelsize'] = 10
         plt.rcParams['axes.labelweight'] = 'normal'
@@ -70,7 +70,7 @@ def set_style(style='ieeetran'):
         plt.rcParams['axes.grid.axis'] = 'both'
         plt.rcParams['axes.prop_cycle'] = monochrome
         plt.rcParams['axes.xmargin'] = 0
-        plt.rcParams['grid.color'] = '0.75'
+        plt.rcParams['grid.color'] = '0.8'
         plt.rcParams['lines.linewidth'] = 1
         plt.rcParams['lines.markersize'] = 4
         plt.rcParams['legend.fontsize'] = 8
