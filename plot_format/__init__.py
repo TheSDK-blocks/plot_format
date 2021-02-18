@@ -47,7 +47,7 @@ from cycler import cycler
 def set_style(style='ieeetran'):
     # Common settings
     plt.rcParams['savefig.bbox'] = 'tight'
-    plt.rcParams['savefig.pad_inches'] = 0
+    plt.rcParams['savefig.pad_inches'] = 0.01
     plt.rcParams['savefig.format'] = 'pdf'
     plt.rcParams['figure.dpi'] = 150
     plt.rcParams['figure.constrained_layout.use'] = True
@@ -61,7 +61,6 @@ def set_style(style='ieeetran'):
         # This should give fitting font style, might not work if ghostscript is not in path
         plt.rcParams['text.usetex'] = True
         plt.rcParams['text.latex.preamble'] = r'\usepackage{mathptmx} \usepackage{amsmath}'
-        # 10 or 8?
         plt.rcParams['axes.labelsize'] = 10
         plt.rcParams['axes.labelweight'] = 'normal'
         plt.rcParams['axes.titleweight'] = 'normal'
@@ -79,12 +78,15 @@ def set_style(style='ieeetran'):
         plt.rcParams['legend.framealpha'] = 1
         plt.rcParams['legend.edgecolor'] = '0'
         plt.rcParams['legend.borderpad'] = 0.3
-        #plt.rcParams['legend.handlelength'] = 1.5
         plt.rcParams['legend.handletextpad'] = 0.5
         plt.rcParams['legend.labelspacing'] = 0.4
         plt.rcParams['patch.linewidth'] = '0.5'
         plt.rcParams['xtick.labelsize'] = 9
         plt.rcParams['ytick.labelsize'] = 9
+        #plt.rcParams['xtick.direction'] = 'in'
+        #plt.rcParams['ytick.direction'] = 'in'
+        #plt.rcParams['xtick.top'] = True
+        #plt.rcParams['ytick.right'] = True
         plt.rcParams['axes.titlesize'] = 10
         # This should be the width of one column
         plt.rcParams['figure.figsize'] = (3.5,2.0)
