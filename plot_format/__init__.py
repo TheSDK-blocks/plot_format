@@ -146,3 +146,17 @@ def set_style(style='ieeetran'):
     else:
         pass
     return
+
+def hscale(mult):
+    '''Scale the height of the current figure.
+    '''
+    fig = plt.gcf()
+    fsize = fig.get_size_inches()
+    fig.set_size_inches(fsize[0],fsize[1]*mult)
+
+def wscale(mult):
+    '''Scale the width of the current figure.
+    '''
+    fig = plt.gcf()
+    fsize = fig.get_size_inches()
+    fig.set_size_inches(fsize[0]*mult,fsize[1])
