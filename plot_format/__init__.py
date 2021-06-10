@@ -52,7 +52,7 @@ def set_style(style='ieeetran'):
     plt.rcParams['figure.dpi'] = 150
     plt.rcParams['figure.constrained_layout.use'] = True
     if style == 'ieeetran':
-        # This cycles first through linestyles with black ('0') color, then 40% gray, etc. 
+        # This cycles first through linestyles with black ('0') color, then 50% gray, etc. 
         monochrome = (cycler('color', ['0.0','0.5','0.7'])*cycler('linestyle', ['-', '--', ':', '-.']))
         plt.rcParams['font.weight'] = 'normal'
         plt.rcParams['font.family'] = 'serif'
@@ -72,6 +72,7 @@ def set_style(style='ieeetran'):
         plt.rcParams['grid.color'] = '0.8'
         plt.rcParams['lines.linewidth'] = 1
         plt.rcParams['lines.markersize'] = 4
+        #plt.rcParams['lines.markerfacecolor'] = 'none'
         plt.rcParams['legend.fontsize'] = 8
         plt.rcParams['legend.fancybox'] = False
         plt.rcParams['legend.frameon'] = True
@@ -80,6 +81,7 @@ def set_style(style='ieeetran'):
         plt.rcParams['legend.borderpad'] = 0.3
         plt.rcParams['legend.handletextpad'] = 0.5
         plt.rcParams['legend.labelspacing'] = 0.4
+        plt.rcParams['legend.columnspacing'] = 1.5
         plt.rcParams['patch.linewidth'] = '0.5'
         plt.rcParams['xtick.labelsize'] = 9
         plt.rcParams['ytick.labelsize'] = 9
@@ -89,7 +91,7 @@ def set_style(style='ieeetran'):
         #plt.rcParams['ytick.right'] = True
         plt.rcParams['axes.titlesize'] = 10
         # This should be the width of one column
-        plt.rcParams['figure.figsize'] = (3.5,2.0)
+        plt.rcParams['figure.figsize'] = (3.5,1.8)
         plt.rcParams['image.cmap'] = 'gray'
     elif style == 'isscc':
         monochrome = (cycler('linestyle', ['-', '--', ':', '-.'])*cycler('color', ['b','r','g','m','k']))
