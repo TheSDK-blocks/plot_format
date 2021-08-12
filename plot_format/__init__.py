@@ -56,7 +56,7 @@ def set_style(style='ieeetran'):
         monochrome = (cycler('color', ['0.0','0.5','0.7'])*cycler('linestyle', ['-', '--', ':', '-.']))
         plt.rcParams['font.weight'] = 'normal'
         plt.rcParams['font.family'] = 'serif'
-        plt.rcParams['font.serif'] = ['Times New Roman'] + plt.rcParams['font.serif']
+        plt.rcParams['font.serif'] = ['Nimbus Roman No9 L'] + plt.rcParams['font.serif']
         plt.rcParams['mathtext.fontset'] = 'dejavuserif'
         # This should give fitting font style, might not work if ghostscript is not in path
         plt.rcParams['text.usetex'] = True
