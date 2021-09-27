@@ -44,11 +44,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 from cycler import cycler
 
-def set_style(style='ieeetran'):
+def set_style(style='ieeetran', format='pdf'):
     # Common settings
     plt.rcParams['savefig.bbox'] = 'tight'
-    plt.rcParams['savefig.pad_inches'] = 0.01
-    plt.rcParams['savefig.format'] = 'pdf'
+    if format == 'eps': # For some reason eps files need larger padding (otherwise y-axis label is clipped)
+        plt.rcParams['savefig.pad_inches'] = 0.03
+    else:
+        plt.rcParams['savefig.pad_inches'] = 0.01
+    plt.rcParams['savefig.format'] = format 
     plt.rcParams['figure.dpi'] = 150
     plt.rcParams['figure.constrained_layout.use'] = True
     if style == 'ieeetran':
