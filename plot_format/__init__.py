@@ -35,12 +35,7 @@ styling should be done in the plot itself.
 import os
 import sys
 import pdb
-if not (os.path.abspath('../../thesdk') in sys.path):
-    sys.path.append(os.path.abspath('../../thesdk'))
-
-from thesdk import *
 import numpy as np
-
 import matplotlib.pyplot as plt
 from cycler import cycler
 
@@ -72,6 +67,7 @@ def set_style(style='ieeetran', format='pdf'):
         plt.rcParams['axes.grid.axis'] = 'both'
         plt.rcParams['axes.prop_cycle'] = monochrome
         plt.rcParams['axes.xmargin'] = 0
+        plt.rcParams['axes.ymargin'] = 0.2
         plt.rcParams['grid.color'] = '0.8'
         plt.rcParams['lines.linewidth'] = 1
         plt.rcParams['lines.markersize'] = 4
