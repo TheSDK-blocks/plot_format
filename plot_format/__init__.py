@@ -116,10 +116,11 @@ def set_style(style='ieeetran', format='pdf'):
         plt.rcParams['legend.fancybox'] = False
         plt.rcParams['legend.frameon'] = True
         plt.rcParams['legend.framealpha'] = 1
+        plt.rcParams['axes.titlesize'] =10 
         plt.rcParams['legend.edgecolor'] = '0.6'
         plt.rcParams['xtick.labelsize'] = 9
         plt.rcParams['ytick.labelsize'] = 9
-        plt.rcParams['figure.titlesize'] = 10
+        #plt.rcParams['figure.titlesize'] = 10
         plt.rcParams['figure.figsize'] = (3.2,2.3)
         plt.rcParams['image.cmap'] = 'jet'
     elif style == 'isscc_bw':
